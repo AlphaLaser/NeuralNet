@@ -2,7 +2,8 @@ tasks:
   - name: Install Julia
     init: |
       curl -fsSL https://install.julialang.org | sh
-      source /home/gitpod/.bashrc
+      echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
+      source ~/.bashrc
     command: echo "Julia installed"
 
 vscode:
