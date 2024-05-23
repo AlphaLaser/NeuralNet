@@ -1,0 +1,14 @@
+tasks:
+  - name: Install Julia
+    init: |
+      curl -fsSL https://install.julialang.org | sh
+      source /home/gitpod/.bashrc
+    command: echo "Julia installed"
+
+vscode:
+  extensions:
+    - julialang.language-julia
+
+ports:
+  - port: 1234
+    onOpen: open-preview
